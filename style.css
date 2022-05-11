@@ -1,4 +1,15 @@
-.principal{
+.principal {
+    background-color: honeydew;
+    border: 5px;
+    border-radius: 25px;
+    padding: 5px 20px;
+    color: darkcyan;
+    font-family: serif;
+    width: 600px;
+    margin: auto;
 
-    
+}
+
+body {
+    background: beige;
 }
