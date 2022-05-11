@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <b>Nombre del Post:</b><span id="txtNombrePost"></span>
+    <b>¿Está completo?</b><span id="txtCompleto"></span>
+
+    <script>
+
+        async function cargarUrl(url){
+             //away frena el sistema esperando respuesta de la promesa
+             let respuesta =  await fetch(url);
+              return respuesta.json();
+
+        }
+        
+        async function cargarJson() {
+            let json = await cargarUrl('https://jsonplaceholder.typicode.com/todos/1'); 
+
+            let spanNombrePost = document.getElementById("txtNombrePost");
+            spanNombrePost.innerText = json.title;
+
+            let spanCompleto = document.getElementById("txtCompleto");
+
+            //spanCompleto.innerText = json.compelted ? "Esta completo" : "Esta incompleto"
+
+            if (json.completed) {
+                spanCompleto.innerText = "Está completo";
+            } else {
+                spanCompleto.innerText = "Está incompleto";
+            }
+
+
+            console.log(json);
+        }
+
+        cargarJson();
+
+    </script>
+
+</body>
+
+</html>

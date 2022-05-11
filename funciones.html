@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function calcularSuperficie(ancho, alto) {
+            var resultado = ancho * alto;
+            return resultado;
+        }
+
+        function calcularTerreno() {
+
+            var inputAncho = prompt("Ingrese el ancho del terreno en metros");
+            var inputAlto = prompt("Ingrese el alto del terreno en metros");
+
+            var superficieTerreno = calcularSuperficie(inputAncho, inputAlto);
+            alert("La superfiecie del terreno es: " + superficieTerreno);
+
+        }
+
+        calcularTerreno();
+        calcularTerreno();
+
+
+
+
+    </script>
+
+</body>
+
+</html>
