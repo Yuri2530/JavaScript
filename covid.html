@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas COVID</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="principal">
+
+        <h1>Estadísticas COVID19</h1>
+
+        <b>Fecha: </b> <input id="inputFecha" type="date" /><br />
+        <b>País: </b>
+
+        <select id="selectPais">
+            <option value="Colombia">Colombia</option>
+            <option value="Spain">España</option>
+        </select>
+
+        <button id="btnCargar">Cargar Estadísticas</button>
+        <br />
+        <ul>
+            <li>Confirmado hoy <span id="today_confirmed"></span> </li>
+            <li>Muertes hoy <span id="today_deaths"></span></li>
+            <li>Nuevo confirmado hoy <span id="today_new_confirmed"></span</li>
+            <li>Nuevas muertes hoy <span id="today_new_deaths"></span></li>
+            <li>Nuevos casos abiertos hoy <span id="today_new_open_cases"></span</li>
+            <li>Nuevo recuperado hoy <span id="today_new_recovered"></span</li>
+            <li>Casos abiertos hoy <span id="today_open_cases"></span> </li>
+            <li>Recuperado hoy <span id="today_recovered"></span></li>
+            <li>Confirmado ayer <span id="yesterday_confirmed"></span></li>
+            <li>Muertes ayer <span id="yesterday_deaths"></span></li>
+            <li>Casos abiertos ayer <span id="yesterday_open_cases"></span></li>
+            <li>Recuperado ayer <span id="yesterday_recovered"></span></li>
+        </ul>
+
+    </div>
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>
